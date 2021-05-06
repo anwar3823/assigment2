@@ -1,0 +1,16 @@
+echo "Enter your gross salary"
+read sal
+if [ $sal -gt 2000 ]
+then
+ta=$(($sal *15))
+tax=$(($ta /100))
+ns=$(($sal - $tax))
+elif [ $sal -ge 1000 ] && [ $sal -lt 2000 ]
+then
+ta=$(($sal *10))
+tax=$(($ta /100))
+ns=$(($sal - $tax ))
+else
+ns=$sal
+fi
+echo "your net salary after reduction is: $ns "
